@@ -1,10 +1,10 @@
-# Version 1.1
+# Version 1.2
 
-FROM crowdriff/baseimage
+FROM crowdriff/redis
 
 MAINTAINER Abhinav Ajgaonkar <abhi@crowdriff.com>
 
-# Install Python & PIP
+# Install Python & git
 RUN \
     apt-get update; \
     apt-get install -y -qq python git; \
