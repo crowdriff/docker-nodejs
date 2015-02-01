@@ -1,13 +1,13 @@
-# Version 1.1
+# Version 1.2
 
-FROM crowdriff/baseimage
+FROM crowdriff/redis
 
 MAINTAINER Abhinav Ajgaonkar <abhi@crowdriff.com>
 
-# Install Python & PIP
+# Install Python & git
 RUN \
     apt-get update; \
-    apt-get install -y -qq python; \
+    apt-get install -y -qq python git; \
     wget -O - http://nodejs.org/dist/v0.10.35/node-v0.10.35-linux-x64.tar.gz | tar xzf - --strip-components=1 --exclude="README.md" --exclude="LICENSE" --exclude="ChangeLog" -C "/usr/local"; \
     npm install --silent --quiet -g grunt-cli bower forever;
 
