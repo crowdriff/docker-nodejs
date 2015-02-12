@@ -4,7 +4,7 @@ FROM crowdriff/redis
 
 MAINTAINER Abhinav Ajgaonkar <abhi@crowdriff.com>
 
-# Install Python & git
+# Install Python, git & node
 RUN \
     apt-get update; \
     apt-get install -y -qq python git; \
